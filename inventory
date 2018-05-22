@@ -1,0 +1,1 @@
+default ansible_host=127.0.0.1 ansible_connection=winrm ansible_user=vagrant ansible_password=vagrant ansible_connector=winrm ansible_port=55986 ansible_winrm_server_cert_validation=ignore

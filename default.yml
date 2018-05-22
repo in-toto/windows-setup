@@ -1,0 +1,21 @@
+- name: Set in-toto up
+  hosts: all
+  gather_facts: true
+  tasks:
+    - name: Install python2
+      win_chocolatey:
+          name: python2
+          state: present
+    - name: Install git
+      win_chocolatey:
+          name: git
+          state: present
+
+    - name: Install tox
+      win_command: "pip install tox"
+
+    - name: Install in-toto
+      win_shell: |
+          git clone https://github.com/in-toto/in-toto 
+          cd in-toto
+          tox -e py27

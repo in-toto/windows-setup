@@ -1,5 +1,5 @@
 Vagrant.configure("2") do |config|
-  config.vm.box = "jborean93/WindowsServer2016"
+  config.vm.box = "jborean93/WindowsServer2022"
   config.vm.communicator = "winrm"
 
   config.winrm.transport = "negotiate"

@@ -2,9 +2,9 @@
   hosts: all
   gather_facts: true
   tasks:
-    - name: Install python2
+    - name: Install python3
       win_chocolatey:
-          name: python2
+          name: python310
           state: present
     - name: Install git
       win_chocolatey:
@@ -18,4 +18,4 @@
       win_shell: |
           git clone https://github.com/in-toto/in-toto 
           cd in-toto
-          tox -e py27
+          tox -e py310
